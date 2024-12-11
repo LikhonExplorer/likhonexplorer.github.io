@@ -3,34 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Primary Meta Tags -->
-    <title>LikhonExplorer | Technology, Programming & Cryptocurrency</title>
-    <meta name="title" content="LikhonExplorer | Technology, Programming & Cryptocurrency">
     <meta name="description" content="Explore cutting-edge technology, programming insights, and cryptocurrency trends with Likhon Sheikh. Your gateway to digital innovation and learning.">
     <meta name="keywords" content="technology, programming, cryptocurrency, tech exploration, digital innovation, web development, blockchain">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://likhonexplorer.github.io/">
+    <meta name="author" content="Likhon Sheikh">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#2c3e50">
+
+    <!-- Primary Meta Tags -->
+    <title>LikhonExplorer | Technology, Programming & Cryptocurrency</title>
     <meta property="og:title" content="LikhonExplorer | Technology, Programming & Cryptocurrency">
     <meta property="og:description" content="Explore cutting-edge technology, programming insights, and cryptocurrency trends with Likhon Sheikh. Your gateway to digital innovation and learning.">
+    <meta property="og:url" content="https://likhonexplorer.github.io/">
     <meta property="og:image" content="https://likhonexplorer.github.io/assets/og-image.png">
-    
-    <!-- Twitter -->
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://likhonexplorer.github.io/">
     <meta property="twitter:title" content="LikhonExplorer | Technology, Programming & Cryptocurrency">
     <meta property="twitter:description" content="Explore cutting-edge technology, programming insights, and cryptocurrency trends with Likhon Sheikh. Your gateway to digital innovation and learning.">
     <meta property="twitter:image" content="https://likhonexplorer.github.io/assets/twitter-image.png">
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://likhonexplorer.github.io/assets/favicon.png">
-    
+    <link rel="apple-touch-icon" type="image/png" href="https://likhonexplorer.github.io/assets/apple-touch-icon.png">
+
     <!-- CDN Stylesheets -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-    
+
     <!-- Custom Styles -->
     <style>
         :root {
@@ -38,36 +39,48 @@
             --secondary-color: #3498db;
             --accent-color: #e74c3c;
         }
-        
+
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
             color: var(--primary-color);
             background-color: #f4f6f7;
         }
-        
-        .hero-section {
+
+       .hero-section {
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
             padding: 100px 0;
             text-align: center;
         }
-        
-        .section-title {
+
+       .section-title {
             color: var(--primary-color);
             border-bottom: 3px solid var(--secondary-color);
             padding-bottom: 10px;
             margin-bottom: 30px;
         }
-        
-        .tech-card {
+
+       .tech-card {
             transition: transform 0.3s ease;
             background-color: white;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-        
-        .tech-card:hover {
+
+       .tech-card:hover {
             transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+           .hero-section {
+                padding: 50px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+           .hero-section {
+                padding: 20px 0;
+            }
         }
     </style>
 </head>
@@ -233,12 +246,12 @@
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
+                    behavior:'smooth'
                 });
             });
         });
     </script>
-    
+
     <!-- SEO and Performance Optimization -->
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" as="style">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" as="style">
