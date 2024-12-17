@@ -24,9 +24,28 @@
     <meta property="twitter:description" content="Explore cutting-edge technology, programming insights, and cryptocurrency trends with Likhon Sheikh. Your gateway to digital innovation and learning.">
     <meta property="twitter:image" content="https://likhonexplorer.github.io/assets/twitter-image.png">
 
+    <!-- Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Likhon Sheikh",
+      "url": "https://likhonexplorer.github.io/",
+      "image": "https://likhonexplorer.github.io/assets/profile.png",
+      "sameAs": [
+        "https://github.com/LikhonExplorer",
+        "https://t.me/LikhonExplorer"
+      ],
+      "jobTitle": "Tech Explorer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "LikhonExplorer"
+      }
+    }
+    </script>
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://likhonexplorer.github.io/assets/favicon.png">
-    <link rel="apple-touch-icon" type="image/png" href="https://likhonexplorer.github.io/assets/apple-touch-icon.png">
 
     <!-- CDN Stylesheets -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -41,68 +60,78 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Roboto', sans-serif;
             line-height: 1.6;
             color: var(--primary-color);
-            background-color: #f4f6f7;
-            background-image: linear-gradient(to bottom, #f4f6f7, #ffffff);
+            background: #f9f9f9;
+            margin: 0;
+            padding: 0;
         }
 
-       .hero-section {
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .hero-section {
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
-            padding: 100px 0;
             text-align: center;
+            padding: 120px 0;
+            background-attachment: fixed;
         }
 
-       .section-title {
+        .section-title {
             color: var(--primary-color);
-            border-bottom: 3px solid var(--secondary-color);
-            padding-bottom: 10px;
-            margin-bottom: 30px;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
         }
 
-       .tech-card {
-            transition: transform 0.3s ease;
-            background-color: white;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        .card {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: none;
+            transition: transform 0.3s;
         }
 
-       .tech-card:hover {
-            transform: scale(1.05);
+        .card:hover {
+            transform: translateY(-5px);
         }
 
-        @media (max-width: 768px) {
-           .hero-section {
-                padding: 50px 0;
-            }
+        footer {
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
         }
 
-        @media (max-width: 480px) {
-           .hero-section {
-                padding: 20px 0;
-            }
+        .btn {
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
         }
     </style>
 </head>
 <body>
-    <audio id="background-audio" loop autoplay>
-        <source src="https://github.com/LikhonExplorer/likhonexplorer.github.io/raw/refs/heads/main/audios.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="#">LikhonExplorer</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"> 
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#technologies">Technologies</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
@@ -111,156 +140,77 @@
     </nav>
 
     <!-- Hero Section -->
-    <header id="home" class="hero-section text-white">
+    <section class="hero-section">
         <div class="container">
-            <h1 class="display-4">LikhonExplorer</h1>
-            <p class="lead">Exploring Technology, Programming, and Cryptocurrency</p>
-            <a href="#about" class="btn btn-light mt-3">Discover More</a>
+            <h1 class="display-3">Welcome to LikhonExplorer</h1>
+            <p class="lead">Your gateway to technology, programming, and cryptocurrency exploration.</p>
+            <a href="#about" class="btn btn-light btn-lg">Learn More</a>
         </div>
-    </header>
+    </section>
 
     <!-- About Section -->
     <section id="about" class="py-5">
         <div class="container">
-            <h2 class="section-title text-center">About Me</h2>
-            <div class="row">
+            <h2 class="section-title">About Me</h2>
+            <div class="row align-items-center">
                 <div class="col-md-6">
-                    <img src="https://likhonexplorer.github.io/assets/profile.png" alt="Likhon Sheikh" class="img-fluid rounded-circle mb-3">
+                    <img src="https://likhonexplorer.github.io/assets/profile.png" alt="Likhon Sheikh" loading="lazy">
                 </div>
                 <div class="col-md-6">
-                    <p>Hi, I'm Likhon Sheikh, a passionate technology explorer dedicated to pushing the boundaries of digital innovation. With a keen interest in programming, web technologies, and cryptocurrency, I'm constantly learning and creating.</p>
-                    <div class="social-links">
-                        <a href="https://github.com/LikhonExplorer" class="btn btn-dark m-1"><i class="fab fa-github"></i> GitHub</a>
-                        <a href="https://t.me/LikhonExplorer" class="btn btn-primary m-1"><i class="fab fa-telegram"></i> Telegram</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Technologies Section -->
-    <section id="technologies" class="bg-light py-5">
-        <div class="container">
-            <h2 class="section-title text-center">Technologies I Explore</h2>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card tech-card">
-                        <div class="card-body text-center">
-                            <i class="fas fa-code fa-3x text-primary mb-3"></i>
-                            <h4>Web Development</h4>
-                            <p>Modern web technologies and frameworks</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card tech-card">
-                        <div class="card-body text-center">
-                            <i class="fas fa-coins fa-3x text-success mb-3"></i>
-                            <h4>Cryptocurrency</h4>
-                            <p>Blockchain and digital currency exploration</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card tech-card">
-                        <div class="card-body text-center">
-                            <i class="fas fa-robot fa-3x text-danger mb-3"></i>
-                            <h4>Emerging Tech</h4>
-                            <p>AI, Machine Learning, and future technologies</p>
-                        </div>
-                    </div>
+                    <p>Hi, I'm Likhon Sheikh, a passionate technology enthusiast exploring programming, web development, and cryptocurrency. Join me as I share my journey of innovation and learning.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-5">
+    <section id="projects" class="py-5 bg-light">
         <div class="container">
-            <h2 class="section-title text-center">Recent Projects</h2>
+            <h2 class="section-title">My Projects</h2>
             <div class="row">
-                <div class="col-md-4 mb-4">
+                <!-- Project Example -->
+                <div class="col-md-4">
                     <div class="card">
+                        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Project Image" loading="lazy">
                         <div class="card-body">
-                            <h5 class="card-title">Project 1</h5>
-                            <p class="card-text">Description of an exciting technology project</p>
-                            <a href="#" class="btn btn-outline-primary">View Project</a>
+                            <h5 class="card-title">Project Title</h5>
+                            <p class="card-text">A brief description of this project.</p>
+                            <a href="#" class="btn btn-primary">View Project</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Project 2</h5>
-                            <p class="card-text">Another innovative technological exploration</p>
-                            <a href="#" class="btn btn-outline-primary">View Project</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Project 3</h5>
-                            <p class="card-text">Cutting-edge development showcase</p>
-                            <a href="#" class="btn btn-outline-primary">View Project</a>
-                        </div>
-                    </div>
-                </div>
+                <!-- Repeat for more projects -->
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="bg-dark text-white py-5">
+    <section id="contact" class="py-5">
         <div class="container">
-            <h2 class="section-title text-center text-white">Contact Me</h2>
-            <div class="row">
-                <div class="col-md-6 offset-md-3">
-                    <form>
-                        <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Your Name" required>
-                        </div>
-                        <div class="mb-3">
-                            <input type="email" class="form-control" placeholder="Your Email" required>
-                        </div>
-                        <div class="mb-3">
-                            <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary w-100">Send Message</button>
-                    </form>
+            <h2 class="section-title">Contact Me</h2>
+            <form>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Your Name">
                 </div>
-            </div>
+                <div class="mb-3">
+                    <input type="email" class="form-control" placeholder="Your Email">
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Send</button>
+            </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3">
+    <footer>
         <div class="container">
             <p>&copy; 2024 LikhonExplorer. All Rights Reserved.</p>
-            <div class="social-icons">
-                <a href="https://github.com/LikhonExplorer" class="text-white mx-2"><i class="fab fa-github"></i></a>
-                <a href="https://t.me/LikhonExplorer" class="text-white mx-2"><i class="fab fa-telegram"></i></a>
-            </div>
         </div>
     </footer>
 
-    <!-- CDN Scripts -->
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Smooth scrolling for navigation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'mooth'
-                });
-            });
-        });
-    </script>
-
-    <!-- SEO and Performance Optimization -->
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" as="style">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" as="style">
-    <link rel="canonical" href="https://likhonexplorer.github.io/">
 </body>
 </html>
